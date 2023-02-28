@@ -1,11 +1,13 @@
 services:
   - type: web
     name: server
-    env: node
-    buildCommand: cd Insta_Mern_client;npm install
-    startCommand: cd Insta_Mern_client;npm start
-    plan: free
-    autoDeploy: false
+    # env: node
+    # buildCommand: cd Insta_Mern_client;npm install
+    # startCommand: cd Insta_Mern_client;npm start
+    # plan: free
+    # autoDeploy: false
+    env: docker
+    rootDir: ./
 
   - type: pserv
     name: mongodb
