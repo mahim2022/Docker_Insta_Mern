@@ -1,5 +1,5 @@
 services:
-  - type: server
+  - type: web
     name: server
     env: node
     buildCommand: cd Insta_Mern_client;npm install
