@@ -1,0 +1,17 @@
+services:
+  - type: server
+    name: server
+    env: node
+    buildCommand: cd Insta_Mern_client;npm install
+    startCommand: cd Insta_Mern_client;npm start
+    plan: free
+    autoDeploy: false
+
+  - type: pserv
+    name: mongodb
+    env: docker
+    autoDeploy: false
+    disk:
+      name: data
+      mountPath: /data/db
+      sizeGB: 1
